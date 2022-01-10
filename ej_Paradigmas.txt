@@ -1,0 +1,487 @@
+Algoritmo TP1_ej1
+	definir c1 Como Entero
+	definir c2 Como Entero
+	
+	Mientras c1=c2 Hacer
+		Escribir " ingresar dos valores "
+		Leer c1,c2
+	
+	FinMientras
+	
+	Si c1<c2 Entonces
+		Escribir c1," | ",c2
+	SiNo
+		Escribir c2," | ",c1
+	FinSi
+FinAlgoritmo
+
+_________________________
+
+Algoritmo tp1_ej2
+	
+	definir c1 Como Entero
+	definir c2 Como Entero
+	definir c3 como entero
+	
+	Escribir " Ingresar dos numeros "
+	Leer c1, c2 
+	
+	c3<-c1+c2
+	escribir " total suma " ,c3
+	
+FinAlgoritmo
+
+________________________
+
+Algoritmo tp1_ej3
+	definir C1 como entero
+	Leer c1
+	
+	mientras ( C1 <= 100 ) hacer
+		escribir( C1 );
+		C1 <- C1 + 1;
+	finmientras
+	
+FinAlgoritmo
+
+_______________________
+
+Algoritmo TP2_1
+	Definir c1,c2,c3 Como Entero;
+	Escribir 'Ingresar valores para c1, c2, c3';
+	Leer c1,c2,c3;
+	Si c1>c2 Entonces
+		Si c1>c3 Entonces
+			Si c2>c3 Entonces
+				Escribir 'el valor mayor es : ',c1,' ,es valor menor es :  ',c3;
+			SiNo
+				Escribir 'el valor mayor es : ',c1,' ,es valor menor es :  ',c2;
+			FinSi
+		SiNo
+			Escribir 'el valor mayor es : ',c3,' ,es valor menor es :  ',c2;
+		FinSi
+	SiNo
+		Si c2>c3 Entonces;
+			Si c1>c3 Entonces
+				Escribir 'el valor mayor es : ',c2,' ,es valor menor es :  ',c3;
+			SiNo
+				Escribir 'el valor mayor es : ',c2,' ,es valor menor es :  ',c1;
+			FinSi
+		SiNo
+			Si c2>c1 Entonces
+				Escribir 'el valor mayor es : ',c3,' ,es valor menor es :  ',c1;
+			
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
+
+___________________
+
+Algoritmo TP2_2
+	definir i Como Entero
+	
+	Para i<-1 Hasta 6 Con Paso 1 Hacer;
+		escribir (i);
+	Fin Para
+	
+FinAlgoritmo
+
+___________________
+
+Algoritmo sin_titulo
+	definir i , x como entero;
+	escribir "ingrese valor desde";
+	
+	leer i;
+	Para x=i Hasta i+5 Con Paso 1 Hacer;
+		escribir x;
+	Fin Para
+FinAlgoritmo
+
+____________________
+
+Algoritmo sin_titulo
+	definir i , x como entero;
+	escribir "ingrese valor desde";
+	
+	leer i;
+	x=0;
+	Repetir
+		escribir i;
+		i=i+1;
+		x=x+1;
+	Hasta Que x>=6;
+FinAlgoritmo
+
+_____________________
+
+Algoritmo TP2_3
+	definir i, N Como Entero;
+	
+	Escribir "Ingresar el valor para N";
+	leer N;
+	Para i<-n Hasta N+5 Con Paso 1 Hacer;
+		N=N+1;
+		escribir N;
+	Fin Para
+FinAlgoritmo
+
+___________________
+
+Algoritmo TP2_4
+	definir i Como Entero;
+	
+	Escribir "Mostrar por pantalla los multiplos de 3 hasta el 30";
+	
+	Para i<-3 Hasta 30 Con Paso 3 Hacer;
+		
+		escribir i;
+	Fin Para
+	
+FinAlgoritmo
+
+___________________
+
+algoritmo Horas_Minutos_Segundos
+        definir hora,minutos,seg,seghora,segmin,segtot como real;
+		
+		
+        escribir "Ingrese el valor de Horas";
+        leer hora;
+        escribir "Ingrese el valor de Minutos";
+        leer minutos;
+        escribir "Ingrese el valor de Segundos";
+        leer seg;
+		
+        seghora= 3600*hora
+        segmin= 60*minutos
+		
+        segtot=0
+		
+        segtot=seghora+segmin+seg
+		
+		escribir " El tiempo total en segundos es :" mostrar segtot
+		
+finalgoritmo
+
+_________________
+
+algoritmo TP3_ej2
+	definir apellido, nombre, producto como caracter;
+	definir cantidad, precio como entero;
+		
+		
+        escribir "Ingrese Apellido y Nombre del comprador";
+        leer apellido, nombre;
+        escribir "Ingrese descripcion del producto";
+        leer producto;
+        escribir "Ingrese la cantidad de productos a facturar";
+        leer cantidad;
+	    escribir "Ingrese el precio del producto a facturar"; 
+		leer precio;
+		
+        impuesto= precio*21/100
+        valor_total_producto= precio+impuesto
+	    venta_total= valor_total_producto*cantidad
+		
+        
+		escribir " Factura";
+		escribir "Apellido y Nombre :" ,mostrar apellido, nombre;
+		escribir "Producto :" ,mostrar producto;
+		escribir "Cantidad :" ,mostrar cantidad;
+		escribir "Precio :" ,mostrar precio;
+		escribir "Impuesto sobre el producto :" ,mostrar impuesto;
+		escribir "Valor total por unidad :" ,mostrar valor_total_producto;
+		escribir "Venta total :" ,mostrar venta_total
+		
+finalgoritmo
+
+_________________
+
+algoritmo TP3_ej3
+	definir productos como caracter;
+	definir i,cant,cantidad, precio como entero;
+	
+	
+	escribir "Ingrese cantidad de productos";
+	leer cant
+	
+	i=0
+	Para i<-1 Hasta cant Con Paso 1 Hacer
+		escribir "Ingrese descripcion del producto " , i , ":";
+        leer producto;
+        escribir "Ingrese la cantidad de productos " , i , ":";
+        leer cantidad;
+		escribir "Ingrese precio del producto " , i , ":";
+		leer precio;
+		
+		impuesto= precio*21/100
+		valor_total_producto= precio+impuesto
+		venta_total_prod= valor_total_producto*cantidad
+		venta_total= venta_total + venta_total_prod;  
+		
+		escribir "Producto: " , mostrar producto;
+		escribir "Cantidad: " , mostrar cantidad;
+		escribir "Precio: " , mostrar precio;
+		escribir "Impuesto sobre el producto: " , mostrar impuesto;
+		escribir "Valor total por unidad: " , mostrar valor_total_producto;
+		escribir "Venta total del producto: " , venta_total_prod
+        
+	Fin Para
+	
+	escribir "Venta total de los productos facturados: "; 
+	mostrar venta_total;
+		
+finalgoritmo
+
+____________________
+
+algoritmo TP3_ej4
+	dimension vec[5];
+	definir mayor_num, prom_num, i , x, pos_mayor_num como entero;
+	
+	
+	Para i<-1 Hasta 5 Con Paso 1 Hacer;
+		escribir "Ingresar numeros del vector : " , i;
+		leer vec[i];
+		
+		suma_vec=suma_vec+vec[i];
+		prom_vec=suma_vec/i;
+		
+	Fin Para
+	
+	escribir "La suma de los numeros del Vector es: " , mostrar suma_vec;
+	escribir "El promedio de los numeros del vector es :" , mostrar prom_vec;
+	
+	Para i<-1 Hasta 5 Con Paso 1 hacer;
+		Si vec[i]> mayor_num Entonces;
+			mayor_num=vec[i];
+			pos_mayor_num=i;
+		Fin Si
+		
+	Fin Para
+	
+	escribir "El mayor numero del vector es : " , mostrar mayor_num , " En la posicion :" , pos_mayor_num;
+	
+finalgoritmo
+
+_________________
+
+algoritmo TP3_ej5
+	definir apellido, nombre como caracter;
+	definir ventas, i como entero;
+	dimension ventas[12], mes[12];
+	
+	escribir "Ingrese Apellido y Nombre del comprador";
+	leer apellido, nombre;
+	
+	suma_ventas=0
+	
+	Para i<-1 Hasta 12 Con Paso 1 Hacer
+		escribir "Ingresar ventas para el mes de : ", i
+		leer ventas(i)
+		
+		suma_ventas=suma_ventas+ventas(i)
+		ventas_tot=suma_ventas
+		
+	Fin Para
+        
+        escribir "El importe total de ventas de : ", apellido, " , " , nombre , " es : $ " , ventas_tot
+        
+finalgoritmo
+
+________________
+
+algoritmo TP3_ej5
+	definir apellido, nombre como caracter;
+	definir ventas, i, x como entero;
+	dimension ventas[12], meses[12];
+	
+	escribir "Ingrese Apellido y Nombre del comprador";
+	leer apellido, nombre;
+	
+	suma_ventas=0;
+	cargar_meses(meses);
+	
+	Para i<-1 Hasta 12 Con Paso 1 Hacer
+		escribir "Ingresar ventas para el mes de : ", meses(i);
+		leer ventas(i);
+		
+		suma_ventas=suma_ventas+ventas(i);
+		ventas_tot=suma_ventas
+		
+	FinPara
+	
+        
+        escribir "El importe total de ventas de : ", apellido, " , " , nombre, " es : $ " , ventas_tot
+        
+finalgoritmo
+
+Funcion cargar_meses(vectorMeses)
+	vectormeses(1)="Enero";
+	vectormeses(2)="Febrero"
+	vectormeses(3)="Marzo";
+	vectormeses(4)="Abril";
+	vectormeses(5)="Mayo";
+	vectormeses(6)="Junio";
+	vectormeses(7)="Julio";
+	vectormeses(8)="Agosto";
+	vectormeses(9)="Septiembre";
+	vectormeses(10)="Octubre";
+	vectormeses(11)="Noviembre";
+	vectormeses(12)="Diciembre";
+FinFuncion
+
+__________________
+
+Algoritmo TP_4_1
+	dimension VEC_A(5);
+	dimension VEC_B(5);
+	
+	Para i<-1 Hasta 5 Con Paso 1 Hacer
+		Escribir " ingresar valores del vector " , i;
+		Leer VEC_A(i);
+	Fin Para
+	
+	Para i<-1 Hasta 5 Con Paso 1 Hacer
+		Para j<-i+1 Hasta 5 Con Paso 1 Hacer
+			si VEC_A(i)>VEC_A(j) Entonces;
+				x=VEC_A(i);
+				VEC_A(i)=VEC_A(j);
+				VEC_A(j)=x;
+			FinSi
+			
+		Fin Para
+	Fin Para
+	
+	Para i<-1 Hasta 5 Con Paso 1 Hacer
+		VEC_B(i)=VEC_A(i);
+	Fin Para
+
+	
+	Para i<-1 hasta 5 Hacer
+		Escribir "posicion ",i," es: ",VEC_B(i);
+	FinPara
+	
+	
+FinAlgoritmo
+
+__________________
+
+Algoritmo TP_4_1
+	
+	
+	escribir "Ingresar tama�o del vector "
+	leer n
+	
+	dimension VEC_A(n);
+	dimension VEC_B(n);
+	
+	Mientras n>=1 y n<=20 Hacer
+		
+		Para i<-1 Hasta n Con Paso 1 Hacer
+			Escribir " ingresar valores del vector " 
+			Leer VEC_A(i);
+		Fin Para
+		
+		Para i<-1 Hasta n Con Paso 1 Hacer
+			Para j<-i+1 Hasta n Con Paso 1 Hacer
+				si VEC_A(i)>VEC_A(j) Entonces;
+					x=VEC_A(i);
+					VEC_A(i)=VEC_A(j);
+					VEC_A(j)=x;
+				FinSi
+				
+			Fin Para
+		Fin Para
+		
+		Para i<-1 Hasta n Con Paso 1 Hacer
+			VEC_B(i)=VEC_A(i);
+		Fin Para
+		
+		
+		Para i<-1 hasta n con paso 1 hacer
+			Escribir "posicion ",i," es: ",VEC_B(i);
+		FinPara
+		
+	Fin Mientras
+	
+FinAlgoritmo
+
+____________________
+
+Algoritmo TP_5_1
+	definir  dia, mes, anio Como Entero
+	
+	dia<-0;
+	mes<-0;
+	anio<-0;
+	
+	Escribir "Ingrese numero para dia";
+	Leer dia;
+	         Si (dia<=0 o dia>=31) Entonces
+		       Escribir " error numero ingresado no permitido";
+	          Sino
+		      Escribir " numero permitido asignado a dia ";
+			 Escribir " dia ",dia;
+			 FinSi
+	   
+	Escribir "Ingrese numero para mes";
+	Leer mes;
+	      Si mes>12 Entonces
+		   Escribir " error numero ingresado no permitido";
+	     Sino
+		   Escribir " numero permitido asignado a mes "; 
+		   Escribir " mes ",mes;
+		   
+		 FinSi
+		 
+		 
+	Escribir "Ingrese numero para a�o";
+	Leer anio;
+	      Si anio>2050 Entonces
+		   Escribir " error numero ingresado no permitido";
+	     Sino
+		   Escribir " numero permitido asignado a a�o "; 
+		   Escribir " a�o ",anio;
+		   
+		   Escribir " -dia ",dia," -mes ",mes," -a�o ",anio;
+		 FinSi
+		 
+		 segun mes hacer
+			 1:
+				 diamax=31
+			 2:
+				 si (mes =2 y (anion mod 4)=0) entonces
+					 diamax=29
+				 sino 
+					 diamax=28
+				 FinSi
+				 
+			 3:
+				 diamax=31
+			 4:
+				 diamax=30
+			 5:
+				 diamax=31
+			 6:
+				 diamax=30
+			 7:
+				 diamax=31
+			 8:
+				 diamax=31
+			 9:
+				 diamax=30
+			 10:
+				 diamax=31
+			 11:
+				 diamax=30
+			 12:
+				 diamax=31
+				 
+			 
+		 FinSegun
+	
+FinAlgoritmo
+
