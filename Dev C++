@@ -1,1 +1,625 @@
+// tp6_1 dev c++
 
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+    int n1, n2;
+
+    cout<<("digite el primer numero: "); 
+	cin>>n1;
+    cout<<("digite el segundo numero: "); 
+	cin>>n2;
+ 
+
+    if(n1==n2)
+       cout<< "Los numeros ingresados son iguales ";
+
+    else if(n1>n2)
+       cout<<"El mayor numero es: " <<n1;
+
+    else if(n2>n1)
+        cout<<"El mayor numero es: " <<n2;
+
+
+
+    return 0;
+}
+
+_______________________
+
+
+// tp6_2 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+    int n1, n2, suma = 0;
+
+    cout<<"digite numero: "; 
+	cin>>n1;
+    cout<<"digite segundo numero: "; 
+	cin>>n2;
+
+    suma = n1 + n2;
+
+    cout<< "la suma de los dos numeros es: " <<suma<<endl;
+   
+
+    return 0;
+}
+
+_______________________
+
+
+// tp6_3 dev c++
+
+*ingresar por teclado desde donde voy a empezar y la cantidad de veces q lo quiero mostrar, y muestro la cantidad de veces que quiero que se muestre*/
+
+
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+ 
+int main () 
+{
+	int num_inicial =0
+	int cant_veces =0
+	int prox_num =0
+	int cant =0
+	
+	
+	cout<<("EScriba el primer valor")<<endl;
+	cin>>num_inicial;
+
+	cout<<("EScriba la cantidad de valores a mostrar")<<endl;
+	cin>> cant_veces;
+		
+	while (cant< cant_veces)
+	cant = cant+1;
+		
+	cout<<prox_num<<endl;
+	prox_num=prox_num+1;
+		
+}
+_______________________
+
+
+// tp6_4 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+ 
+int main () {
+   
+   int M = 100;
+   for( int i = 3; i < M+1; i = i + 1 ) {
+    	if (i%3==0) {
+      	cout << ("value of i: " )<< i << endl;
+		}
+   }
+ 
+   return 0;
+   
+}
+_______________________
+
+// tp7_1 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+	int segundos=0, minutos=0, horas=0, min_seg=0, horas_seg=0, tot_seg=0;
+	
+	
+	cout<<("Ingresar cantidad de segundos: ");
+	cin>>segundos;
+	
+	cout<<("Ingresar cantidad de minutos: ");
+	cin>>minutos;
+	
+	cout<<("Ingresar cantidad de horas: ");
+	cin>>horas;
+	
+	if (minutos%60==0);
+	    min_seg=minutos*60;
+	    
+    if (horas%3600==0);
+	    horas_seg=horas*3600;
+	    
+	tot_seg=horas_seg+min_seg+segundos;
+	
+	cout<<("El total equivalente en segundos es: ")<<tot_seg;
+	
+    return 0;
+}
+_______________________
+
+// tp7_2 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+	char ape_nomb[30], producto[30];
+	int precio=0,cantidad=0;
+	float porcentaje=0, impuesto=0, precio_final_total=0 , precio_final=0;
+	
+	cout<<("Ingrese Apellido y Nombre del comprador: ");
+	cin>>ape_nomb;
+	
+	cout<<("Ingrese el producto: ");
+	cin>>producto;
+	
+	cout<<("Ingrese el precio del producto: ");
+	cin>>precio;
+	
+	cout<<("cantidad de unidades: ");
+	cin>>cantidad;
+	
+	cout<<("procentaje de impuesto sobre el producto: ");
+	cin>>porcentaje;
+	
+	impuesto=precio*porcentaje/100;
+	precio_final=precio+impuesto;
+	precio_final_total=precio_final*cantidad;
+	
+	cout<<("Comprador: ")<<ape_nomb<<endl;
+	cout<<("Producto: ")<<producto<<endl;
+	cout<<("Precio: ")<<precio<<endl;
+	cout<<("Cantidad: ")<<cantidad<<endl;
+	cout<<("Impuesto: ")<<porcentaje<<endl;
+	cout<<("Precio final por unidad: ")<<precio_final<<endl;
+	cout<<("Precio final de la compra total: ")<<precio_final_total<<endl;
+	
+	    return 0;
+}
+	
+_______________________
+
+// tp7_3 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+	
+	int precio=0,cantidad=0,cant_prod=0,i=0;
+	float porcentaje=0, impuesto=0, precio_final_total=0 , precio_final=0, total=0;
+
+cout<<("\n--------------------------------------------------------------------------------------------------");
+cout<<("\n*** Programacion en Lenguaje C                                                                 ***");
+cout<<("\n*** TP07_EJ03                                                                                  ***");
+cout<<("\n*** Ingresa por teclado cantidad de productos y suma total de ventas                           ***");
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+
+	
+	cout<<"Ingrese cantidad de productos"<<endl;
+	cin>>cant_prod;
+	
+	for (i=1 ; i<=cant_prod ; i++) {
+	    cout<<"Ingrese el precio del producto: "<<i<<endl;
+ 	    cin>>precio;
+ 	    
+	    cout<<"cantidad de unidades: "<<i<<endl;
+	    cin>>cantidad;
+	
+	    cout<<"procentaje de impuesto sobre el producto: "<<i<<endl;
+	    cin>>porcentaje;
+	
+	    impuesto=precio*porcentaje/100;
+	    precio_final=precio+impuesto;
+	    precio_final_total=precio_final*cantidad;
+	    
+	    total=total+precio_final_total;
+	    
+	
+    }
+	    
+	    cout<<"Precio final por producto "<<precio_final<<endl;
+	    
+	    cout<<"Precio final de la compra total: "<<total<<endl;
+	
+	return 0;
+}
+	
+_______________________
+
+// tp7_4 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+	int vec[5];
+	int valor;
+	int valor_mayor=0;
+	int posicion=0;
+	int suma=0;
+	int valor_prom=0;
+	
+cout<<("\n--------------------------------------------------------------------------------------------------");
+cout<<("\n*** Programacion en Lenguaje C                                                                 ***");
+cout<<("\n*** TP07_EJ04                                                                                  ***");
+cout<<("\n*** Ingresa por teclado vector de 5 posiciones, hallar mayor valor, promedio y posicion        ***");
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+
+
+	for (int i=0;i<5;i++){
+		cout <<"Ingrese los valores del vector:  "<<endl;
+		cin >> valor;
+		vec[i] = valor;
+    }
+	
+	valor_mayor = vec[0];
+	posicion = 0+1;
+
+	for(int i=0;i<5;i++){
+		suma= suma+vec[i];
+		if (vec[i]>valor_mayor){
+			valor_mayor = vec[i];
+			posicion=i+1;
+		}
+	}	
+	
+	valor_prom=suma/5;
+
+	
+
+cout<<("\n------------------------------------------------------------------------------------------------\n");	
+
+cout<< "-- El mayor valor de los numeros del vector es: " <<endl;
+cout<<valor_mayor<<endl;
+
+cout<<"-- En la posicion: "<<endl;
+cout<<posicion<<endl;
+
+cout<<"-- El valor promedio de los numeros del vector es: "<<endl;
+cout<<valor_prom<<endl;
+
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+cout<<("\n***                           -------          FIN          -------                            ***");
+
+	
+return 0;
+}
+
+_______________________
+
+// tp7_5 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+	char ape_nomb[30];
+	string vec_meses[12]={"1","2","3","4","5","6","7","8","9","10","11","12"};
+	int ventas[12], tot_ventas=0, i=0;
+	
+	
+cout<<("\n--------------------------------------------------------------------------------------------------");
+cout<<("\n*** Programacion en Lenguaje C                                                                 ***");
+cout<<("\n*** TP07_EJ05                                                                                  ***");
+cout<<("\n*** ""Ingresa por teclado ventas de un vendedor y su total vendido""                           ***");
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+
+
+	cout<< "Ingrese nombre y apellido del vendedor"<<endl;
+	cin>>ape_nomb;
+	
+	for (int i=0; i<=11; i++){
+		cout<< " Ingrese las ventas para el mes : " <<vec_meses[i]<<endl;
+		cin>>ventas[i];
+		tot_ventas=tot_ventas+ventas[i];
+	}
+	
+	cout<< "El total de ventas del vendedor es: "<<	tot_ventas<<endl;
+
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+cout<<("\n***                           -------          FIN          -------                            ***");
+
+
+	return 0;
+}
+_______________________
+
+// tp7_6 dev c++
+
+#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <conio.h>
+#include <stdlib.h>
+using namespace std;
+
+main()
+{
+
+string suc[10];
+string ger[10];
+double ventas[10];
+double total;
+double promedio=0;
+int  cs=0, x=0;
+
+cout<<("\n--------------------------------------------------------------------------------------------------");
+cout<<("\n*** Programacion en Lenguaje C                                                                 ***");
+cout<<("\n*** TP07_EJ06                                                                                  ***");
+cout<<("\n*** Ingresa por teclado Nombre de las sucursales definidas, gerente y ventas                   ***");
+cout<<("\n*** TP07_EJ06_mod                                                                              ***");
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+
+ 
+{
+    cout<< "Ingrese Cantidad de sucursales a habilitar (maximo 10) : " << endl ; 
+    cin >> cs;
+}
+    while(cs>10 or cs<=0);
+	{
+    cout<< "Vuelva a ingresar la Cantidad de sucursales a habilitar (maximo 10) : " << endl ; 
+    cin >> cs;
+    cout <<("\n");
+}
+for (x=0;x<cs;x++)
+{
+    cout<< "Ingrese Nombre sucursal " <<x+1<< " : "<<endl; 
+    cin.ignore();
+	getline(cin, suc[x]);
+    cout <<("\n");
+    cout<<"Ingrese Nombre del Gerente de la sucursal " <<suc[x]<<" : "<<endl;
+    getline(cin, ger[x]);
+    cout <<("\n");
+    cout<<"Ingrese ventas de la sucursal ultimo año " <<suc[x]<<" : "<<endl;
+	cin>>ventas[x];
+	cout <<("\n");
+	total=total+ventas[x];
+}
+    
+	promedio=total/x;
+
+    cout<<("\n------------------------------------------------------------\n");
+    cout<< "Las sucursales ingresadas son: "  << endl ;
+    for (x=0;x<cs;x++)
+{
+    cout<<"Sucursal " << x+1 << " : " << suc[x] << " Gerente: " << " : " << ger[x]<<endl ;
+    cout<<"Ventas del ultimo anio: " << " : " << ventas[x]<<endl;
+	cout<<"el total de ventas del las sucursales es "<< " : " << total<<endl;
+    cout<<"el promedio de ventas de las sucursales es "<< " : " << promedio<<endl;
+}
+    cout<<("\n------------------------------------------------------------\n");
+
+return 0;
+
+}
+
+_______________________
+
+// tp8_1 dev c++
+
+#include <iostream>
+using namespace std;
+
+// Declaración de función
+double calcularimpuesto( double , double );
+
+//double calcularimpuesto( double valor1, double tasa1);
+void mostrarvalor(double);
+
+int main()
+
+{ // Definiendo variables
+double tasa;
+double impuestoCalculado;
+double valor;
+
+// Capturando valores
+cout << "Tasa de Impuesto sobre ventas: ";
+cin >> tasa;
+cout << "\nValor: ";
+cin >> valor;
+
+// Ejecución de función  para calculo de impuesto
+impuestoCalculado = calcularimpuesto(valor, tasa);
+
+// Mostrando resultados
+cout << "Para un valor de : $" << valor << " y una tasa de: " << tasa
+<< " el valor de Impuesto sobre Ventas es: $";
+
+// Ejecución de función  para calculo de impuesto
+mostrarvalor(impuestoCalculado);
+
+system("pause");
+return 0;
+}
+
+_______________________
+
+// tp8_2 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+int fn_entrada();
+int fn_proceso(int n_1, int n_2);
+void fn_salida(int n_1, int n_2, int resultado);
+
+main()
+{
+	
+	cout<<("\n*** Programacion en Lenguaje C                                                                 ***");
+    cout<<("\n*** TP08_EJ02                                                                                  ***");
+    cout<<("\n*** Calcular la suma de dos  numeros ingresados                                                ***");
+    cout<<("\n------------------------------------------------------------------------------------------------\n");
+    
+    
+    int n_1 = 0;
+	int n_2 = 0;
+	int resultado;
+	
+    n_1 = fn_entrada();
+
+	n_2 = fn_entrada();
+
+	resultado = fn_proceso(n_1, n_2);
+
+	fn_salida(n_1, n_2, resultado);
+	
+}
+
+//ingresar de los numeros
+
+int fn_entrada(){
+	int valor;
+	cout << "Ingrese un numero: " << endl;
+	cin >> valor;
+return valor;	
+}
+
+
+//proceso
+
+int fn_proceso(int n_1, int n_2){
+
+return n_1 + n_2;
+}
+    
+//mostrar resultado
+
+void fn_salida(int n_1, int n_2, int resultado){
+	
+	cout<<"La suma de los numeros ingresados es: "<<resultado<<endl;
+	
+		
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+cout<<("\n***                           -------          FIN          -------                            ***");
+}   
+
+_______________________
+
+// tp8_3 dev c++
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+void fn_entrada(int& horas, int& min, int& seg); 
+int fn_proceso(int horas, int min, int seg);
+void fn_salida(int horas, int min, int seg, int tot_seg);
+
+main()
+{
+	
+int tiempo[3];
+int seg=0;
+int min=0;
+int horas=0;
+int tot_seg=0;
+
+
+	cout<<("\n*** Programacion en Lenguaje C                                                                 ***");
+    cout<<("\n*** TP08_EJ03                                                                                  ***");
+    cout<<("\n*** Pasar tiempo (horas, minutos y segundos) a segundos                                        ***");
+    cout<<("\n------------------------------------------------------------------------------------------------\n");
+    
+
+    fn_entrada(horas,min, seg);
+
+	tot_seg=fn_proceso(horas,min,seg);
+	
+	fn_salida(horas,min,seg,tot_seg);
+	
+	return 0;
+	
+}
+
+//ingreso de datos
+
+void fn_entrada(int& horas, int& min, int& seg){
+	cout<<("Ingresar cantidad de horas: ");
+	cin>>horas;
+	
+	cout<<("Ingresar cantidad de minutos: ");
+	cin>>min;
+	
+	cout<<("Ingresar cantidad de segundos: ");
+	cin>>seg;
+}
+//proceso
+
+
+int fn_proceso(int horas, int min, int seg){
+
+    return (horas*3600)+(min*60)+seg;
+}
+
+//resultado
+
+void fn_salida(int horas, int min, int seg, int tot_seg){
+
+    cout<<"El total equivalente de "<<horas<<" horas , "<<min<<" minutos , "<<seg<<" y segundos,  en segundos es : "<<tot_seg<<endl;
+    
+    	
+cout<<("\n------------------------------------------------------------------------------------------------\n");
+cout<<("\n***                           -------          FIN          -------                            ***");
+}
