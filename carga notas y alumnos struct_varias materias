@@ -1,0 +1,93 @@
+#include <iostream>
+#include <string.h>
+ 
+using namespace std;
+ 
+struct NOTAS{
+	float mat,esp,pro,Notmayor;
+};
+ 
+struct ALUMNO{
+	short numero;
+	string nombre;
+	short edad;
+	float est;
+	NOTAS nota;
+};
+ 
+int main(int argc, char** argv) {
+	
+	short cantAlum;
+	cout<<"Cantidad de alumnos: ";cin>>cantAlum;
+	ALUMNO alumnos[cantAlum];
+	float proMat=0,proEsp=0,proPro=0;// variables para el promedio
+	
+	for(int i=0;i<cantAlum;i++){
+		cout<<"ALUMNO "<<i+1<<endl;
+		cout<<"\tNúmero: ";cin>>alumnos[i].numero;
+		cout<<"\tNombre: ";cin>>alumnos[i].nombre;
+		cout<<"\tEdad: ";cin>>alumnos[i].edad;
+		cout<<"\tNOTAS:\n";
+		cout<<"\t-----------\n";
+		cout<<"\t\tMatematica: ";cin>>alumnos[i].nota.mat;
+		cout<<"\t\tEspanol: ";cin>>alumnos[i].nota.esp;
+		cout<<"\t\tProgramacion: ";cin>>alumnos[i].nota.pro;
+		cout<<"_____________________________________\n";
+ 
+		proMat+=alumnos[i].nota.mat;
+		proEsp+=alumnos[i].nota.esp;
+		proPro+=alumnos[i].nota.pro;
+	}
+	int notaAprob;
+	cout<<"Minimo para aprobar: ";cin>>notaAprob;
+	cout<<"Alumnos desaprobados\n";
+	for(int i=0;i<cantAlum;i++){
+		if(alumnos[i].nota.mat<notaAprob){
+			cout<<"\tMatematica: "<<alumnos[i].nombre<<endl;
+		}
+			if(alumnos[i].nota.esp<notaAprob){
+			cout<<"\tEspanol: "<<alumnos[i].nombre<<endl;
+		}
+			if(alumnos[i].nota.pro<notaAprob){
+			cout<<"\tProgramacion: "<<alumnos[i].nombre<<endl;
+		}
+	}
+	int totalDesap;
+	totalDesap=0;
+	cout<<"Desaprobados en Matematica\n";
+	for(int i=0;i<cantAlum;i++){
+		if(alumnos[i].nota.mat<notaAprob){
+			cout<<alumnos[i].nombre<<endl;
+			totalDesap++;
+		}
+	}
+	cout<<"Total de Desaprobados en Matematica: "<<totalDesap<<endl;
+	cout<<"___________________________________________\n";
+	totalDesap=0;
+	cout<<"Desaprobados en Espanol\n";
+	for(int i=0;i<cantAlum;i++){
+		if(alumnos[i].nota.esp<notaAprob){
+			cout<<alumnos[i].nombre<<endl;
+			totalDesap++;
+		}
+ 
+	}
+		cout<<"Total de Desaprobados en Espanol: "<<totalDesap<<endl;
+	cout<<"___________________________________________\n";
+	totalDesap=0;
+	cout<<"Desaprobados en Programacion\n";
+	for(int i=0;i<cantAlum;i++){
+		if(alumnos[i].nota.esp<notaAprob){
+			cout<<alumnos[i].nombre<<endl;
+			totalDesap++;
+		}
+	}
+	cout<<"Total de Desaprobados en Programacion: "<<totalDesap<<endl;
+	cout<<"___________________________________________\n";
+	cout<<"Nota promedio\n";
+	cout<<"\tMatematica: "<<proMat/cantAlum<<endl;
+	cout<<"\tEspanol: "<<proEsp/cantAlum<<endl;
+	cout<<"\tProgramacion: "<<proPro/cantAlum<<endl;
+	cout<<"___________________________________________\n";
+	return 0;
+}
